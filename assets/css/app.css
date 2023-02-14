@@ -1,0 +1,462 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #fff;
+  color: #686E85;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+header {
+  position: relative;
+  transition: all 0.3s;
+  background-color: rgb(75, 124, 255);
+}
+
+header .sticky-wrapper {
+  position: relative;
+  z-index: 222;
+  height: auto !important;
+}
+
+.is-sticky .navbar {
+  position: fixed !important;
+  top: 0px;
+}
+
+@media screen and (max-width: 999px) {
+  .is-sticky .navbar {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .navbar .container {
+    background-color: rgb(75, 124, 255);
+  }
+  .is-sticky .navbar .container {
+    background-color: #fff;
+  }
+}
+.is-sticky .navbar .container-fluid {
+  background-color: #fff;
+  box-shadow: 0px 0px 24px rgba(75, 124, 255, 0.28);
+  padding: 10px 25px;
+  border-radius: 5px;
+  width: 95%;
+}
+
+.is-sticky .navbar-brand, .is-sticky .nav-link, .is-sticky .nav-link.active {
+  color: #FFD532;
+}
+
+.is-sticky .navbar-social-icons i {
+  border-color: none;
+  font-size: 16px;
+  color: #242423;
+}
+
+.is-sticky .navbar-social-icons i:hover {
+  color: rgba(36, 36, 35, 0.6);
+}
+
+.is-sticky .nav-link:hover, .is-sticky .nav-link.active, .nav-link:hover, .navbar-brand:hover {
+  color: rgba(36, 36, 35, 0.6);
+}
+
+header nav.navbar {
+  transition: all 0.3s;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+header nav .navbar-brand {
+  color: #fff;
+  font-weight: 600;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 2px 2px #242423;
+}
+
+header .container {
+  align-items: baseline !important;
+  display: flex;
+  justify-items: baseline;
+}
+
+header .nav-link {
+  position: relative;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+header .nav-link.active, header .nav-link:hover, header nav .navbar-brand:hover {
+  color: #FFD532 !important;
+}
+
+button.navbar-toggler, button {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  overflow: hidden;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+h2 {
+  position: relative;
+  font-size: 48px;
+  color: rgb(3, 31, 128);
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+h2::after, #product h3::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background-color: #FFD532;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+h3 {
+  position: relative;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.subheadline {
+  font-style: normal;
+  font-size: 18px;
+  color: #686E85;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.zindex-3 {
+  z-index: 3;
+}
+
+.hero__btn {
+  font-size: 16px;
+  border-radius: 5px;
+  min-width: 125px;
+  background: rgb(75, 124, 255);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-color: rgb(75, 124, 255);
+  padding: 16px 48px;
+  font-weight: 500;
+}
+
+.hero__btn:hover {
+  background: #FFD532;
+  border-color: #FFD532;
+  color: #242423;
+}
+
+.navbar-toggler:focus, .navbar-toggler {
+  box-shadow: none;
+}
+
+.navbar-social-icons i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: #686E85;
+  font-size: 16px;
+}
+
+.navbar-social-icons i:hover {
+  color: rgba(36, 36, 35, 0.6);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: rgb(75, 124, 255);
+  background: linear-gradient(135deg, rgb(75, 124, 255) 0%, rgb(3, 31, 128) 45%);
+  z-index: 2;
+  overflow: hidden;
+  padding-top: 140px;
+  padding-bottom: 140px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero h1, .hero p {
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 56px;
+  font-weight: 900;
+  line-height: 1.2;
+  text-shadow: 2px 2px #242423;
+}
+
+.hero p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.hero img {
+  position: absolute;
+  right: 0px;
+  bottom: -50px;
+  z-index: -1;
+}
+
+.hero .bubbles {
+  position: absolute;
+  z-index: -2;
+}
+
+.hero .bubble {
+  width: 600px;
+  height: 600px;
+  background: linear-gradient(135deg, rgb(75, 124, 255) 0%, rgb(3, 31, 128) 45%);
+  bottom: 0;
+  right: 0;
+  transform: rotate(45deg);
+  border: 50px solid #FFD532;
+  border-radius: 50%;
+}
+
+.hero .dots {
+  top: 0px;
+  left: -300px;
+  width: 600px;
+  height: 600px;
+  filter: greyscale(1);
+}
+
+#aboutus h2::after {
+  left: 40px;
+}
+
+#aboutus .hero__btn, #product .hero__btn, header .hero__btn {
+  background: #FFD532;
+  color: #242423;
+  border-color: #FFD532;
+}
+
+#aboutus {
+  background-color: #F6F7FA;
+}
+
+#aboutus img {
+  width: 480px;
+  height: 480px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+}
+
+#product {
+  position: relative;
+  background: url("https://www.stanislav-drako.cz/public/img/wave.webp");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+}
+
+#product .icon {
+  background-color: #fff;
+  width: 96px;
+  height: 96px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 24px rgba(75, 124, 255, 0.28);
+  border-radius: 5px;
+  padding: 15px;
+  transform: rotate(45deg);
+  z-index: 2;
+}
+
+#product .icon span {
+  background-color: #FFD532;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 700;
+  transform: rotate(-45deg);
+}
+
+#product h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(3, 31, 128);
+}
+
+#product .product-card {
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+#pricing h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(3, 31, 128);
+}
+
+#pricing .price {
+  font-size: 18px;
+  color: #FFD532;
+  font-weight: 500;
+}
+
+#cta {
+  background: linear-gradient(135deg, rgb(75, 124, 255) 0%, rgb(3, 31, 128) 45%);
+}
+
+#cta h2 {
+  font-size: 48px;
+}
+
+#faq .accordion-body {
+  font-size: 16px;
+  background-color: #F6F7FA;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#faq .accordion-item {
+  border: none;
+  background-color: transparent;
+  border-radius: 5px;
+  padding-bottom: 15px;
+}
+
+#faq .accordion .accordion-button.collapsed {
+  box-shadow: none;
+  outline: none;
+  background-color: #fff;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#faq .accordion h2::after {
+  display: none;
+}
+
+#faq .accordion .accordion-button:not(.collapsed) {
+  background-color: #F6F7FA;
+  box-shadow: none;
+  color: #686E85;
+  border-radius: 5px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#faq .accordion .accordion-button:not(.collapsed)::after {
+  fill: #F6F7FA;
+}
+
+#contact-us {
+  padding-top: 40px;
+  padding-bottom: 0px;
+  background-color: rgb(3, 31, 128);
+  color: #fff;
+}
+
+#contact-us h2, #contact-us .subheadline {
+  color: #fff;
+}
+
+#contact-us p {
+  color: #fff;
+}
+
+#contact-us a {
+  color: #FFD532;
+}
+
+#contact-us a:hover {
+  color: #fff;
+}
+
+#contact-us .footer {
+  padding-top: 80px;
+}
+
+@media screen and (max-width: 999px) {
+  .hero h1 {
+    font-size: 26px;
+  }
+  h2 {
+    font-size: 26px;
+  }
+  .hero .subheadline {
+    font-size: 18px;
+  }
+  .hero {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .hero .bubble {
+    bottom: 150px;
+    right: 150px;
+    width: 300px;
+    height: 300px;
+  }
+  .hero .hero__btn {
+    font-size: 16px;
+    min-width: 150px;
+    min-height: 40px;
+    border-radius: 5px;
+    padding: 12px 32px;
+  }
+  .subheadline {
+    font-size: 18px;
+  }
+  .hero img {
+    width: 50%;
+  }
+  #aboutus img {
+    display: none;
+  }
+  h2, #cta h2 {
+    font-size: 26px;
+  }
+}/*# sourceMappingURL=app.css.map */

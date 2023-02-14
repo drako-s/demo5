@@ -1,0 +1,488 @@
+$light : #fff;
+$lighter : #F6F7FA;
+$dark:rgba(#242423, 0.6);
+$darker:#242423;
+$border : #242423;
+$text : #686E85;
+$secondary: rgb(3,31,128);
+$secondary-light: #ff7700;
+$primary: rgb(75,124,279);
+$boxshadow :0px 0px 24px rgba($primary, 0.28);
+$border-radius-small : 5px;
+$border-radius-large : 100px;
+$tertiary : #FFD532;
+$text-light : #717275;
+$gradient : linear-gradient(135deg, $primary 0%, $secondary 45%); 
+$fs-small: 16px;
+$fs-normal:18px;
+$fs-big:20px;
+$fs-bigger:26px;
+$fs-h2: 48px;
+$fs-h1: 56px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: $light;
+    color: $text;
+}
+
+p {
+    font-size: $fs-small;
+    font-weight: 400;
+}
+header {
+    position: relative;
+    transition: all .3s;
+    background-color: $primary;
+}
+
+header .sticky-wrapper {
+    position: relative;
+    z-index: 222;
+    height: auto !important;
+}
+
+.is-sticky .navbar {
+    position: fixed !important;
+    top: 0px;
+}
+
+
+@media screen and (max-width:999px){
+    .is-sticky .navbar {
+        padding-left: 15px;
+        padding-right: 15px;
+    } 
+    .navbar .container {
+        background-color: $primary;
+    }
+    .is-sticky .navbar .container {
+        background-color: $light;
+    }
+}
+
+.is-sticky .navbar .container-fluid {
+    background-color: $light;
+    box-shadow: $boxshadow;
+    padding: 10px 25px;
+    border-radius: $border-radius-small;
+    width: 95%;
+    
+}
+
+.is-sticky .navbar-brand, .is-sticky .nav-link, .is-sticky .nav-link.active {
+    color : $tertiary;
+}
+.is-sticky .navbar-social-icons i {
+    border-color: none;
+    font-size: $fs-small;
+    color: $darker;
+}
+
+.is-sticky .navbar-social-icons i:hover {
+    color:$dark;
+}
+
+.is-sticky .nav-link:hover, .is-sticky .nav-link.active, .nav-link:hover, .navbar-brand:hover {
+    color: $dark;
+}
+
+header nav.navbar {
+    transition: all 0.3s;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+header nav .navbar-brand {
+    color: $light;
+    font-weight: 600;
+    font-size: $fs-bigger;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px $border;
+}
+
+header .container {
+    align-items: baseline !important;
+    display: flex;
+    justify-items: baseline;
+}
+
+header .nav-link {
+    position: relative;
+    color: $light;
+    font-size: $fs-small;
+    font-weight: 600;
+    text-transform:capitalize;  
+}
+
+header .nav-link.active, header .nav-link:hover, header nav .navbar-brand:hover {
+    color: $tertiary !important;
+}
+button.navbar-toggler, button {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+
+section {
+    padding-top: 100px;
+    padding-bottom: 100px; 
+    overflow: hidden;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+h2 {
+    position: relative;
+    font-size: $fs-h2;
+    color: $secondary;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+h2::after, #product h3::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background-color: $tertiary;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h3 {
+    position: relative;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.subheadline {
+    font-style: normal;
+    font-size: $fs-normal;    
+    color: $text;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.zindex-3 {
+    z-index: 3;
+}
+
+
+.hero__btn {
+    font-size: $fs-small;
+    border-radius: $border-radius-small;
+    min-width: 125px;
+    background: $primary;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $light;
+    border-color: $primary;
+    padding: 16px 48px;    
+    font-weight: 500;
+}
+
+.hero__btn:hover {
+    background: $tertiary;
+    border-color: $tertiary;
+    color:$darker;
+}
+
+.navbar-toggler:focus, .navbar-toggler {
+    
+    box-shadow: none;
+}
+
+.navbar-social-icons i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    color: $text;
+    font-size: $fs-small;
+}
+
+.navbar-social-icons i:hover {
+    color:$dark;
+}
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: $primary;
+    background: linear-gradient(135deg, $primary 0%, $secondary 45%); 
+    z-index: 2;
+    overflow: hidden;
+    padding-top: 140px;
+    padding-bottom: 140px;
+    transition: all .3s ease-in-out;
+}
+
+
+.hero h1, .hero p {
+    color: $light;
+}
+
+.hero h1 {
+    font-size: $fs-h1;
+    font-weight: 900;
+    line-height: 1.2;
+    text-shadow: 2px 2px $border;
+}
+
+.hero p {
+    font-size: $fs-normal;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.hero img {
+    position: absolute;
+    right: 0px;
+    bottom: -50px;
+    z-index: -1;
+}
+
+.hero .bubbles {
+    position: absolute;
+    z-index: -2;
+}
+
+.hero .bubble {
+    width: 600px;
+    height: 600px;
+    background: $gradient;
+    bottom: 0;
+    right: 0;
+    transform: rotate(45deg);
+    border: 50px solid $tertiary;
+    border-radius: 50%;
+}
+
+.hero .dots {
+    top: 0px;
+    left: -300px;
+    width: 600px;
+    height: 600px;
+    filter: greyscale(1);
+}
+
+#aboutus h2::after {
+    left: 40px;
+}
+#aboutus .hero__btn, #product .hero__btn, header .hero__btn {
+    background: $tertiary;
+    color: $darker;
+    border-color: $tertiary;
+}
+
+#aboutus {
+    background-color: $lighter;
+}
+
+#aboutus img {
+    width: 480px;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+#product {
+    position: relative;
+    background: url('https://www.stanislav-drako.cz/public/img/wave.webp');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1;
+}
+
+#product .icon {
+    background-color: $light;
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: $boxshadow;
+    border-radius: 5px;
+    padding: 15px;
+    transform: rotate(45deg);
+    z-index: 2;
+}
+#product .icon span {
+    background-color: $tertiary;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: $fs-big;
+    font-weight: 700;
+    transform: rotate(-45deg);
+}
+
+#product h3 {    
+    font-size:$fs-normal;
+    font-weight: 700;
+    color: $secondary;
+}
+
+#product .product-card {
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+#pricing h3 {
+    font-size: $fs-big;
+    font-weight: 700;
+    color: $secondary;
+}
+
+#pricing .price {
+    font-size: $fs-normal;
+    color: $tertiary;
+    font-weight: 500;
+}
+
+#cta {
+    background: $gradient;
+}
+
+#cta h2 {
+    font-size: $fs-h2;
+}
+
+#faq .accordion-body {
+    font-size: $fs-small;
+    background-color: $lighter;
+    border-bottom-left-radius: $border-radius-small;
+    border-bottom-right-radius: $border-radius-small
+}
+
+#faq .accordion-item {
+    border: none;
+    background-color: transparent;
+    border-radius: $border-radius-small;
+    padding-bottom: 15px;
+}
+
+#faq .accordion .accordion-button.collapsed  {
+    box-shadow: none;
+    outline: none;
+    background-color: $light;
+    border-radius: $border-radius-small;
+    border: none;
+    font-size: $fs-big;
+    font-weight: 700;
+}
+
+#faq .accordion h2::after {
+    display: none;
+}
+
+#faq .accordion .accordion-button:not(.collapsed) {
+    background-color: $lighter;
+    box-shadow: none;
+    color: $text;
+    border-radius: $border-radius-small;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border: none;
+    font-size: $fs-big;
+    font-weight: 700;
+}
+
+#faq .accordion .accordion-button:not(.collapsed)::after {
+    fill: $lighter;
+}
+
+#contact-us {
+    padding-top: 40px;
+    padding-bottom: 0px;
+    background-color: $secondary;
+    color: $light;
+}
+
+#contact-us h2, #contact-us .subheadline {
+    color: $light;
+}
+
+#contact-us p {
+    color: $light;
+}
+
+#contact-us a {
+    color: $tertiary;
+}
+#contact-us a:hover {
+    color:$light;
+}
+
+#contact-us .footer {
+    padding-top: 80px;
+}
+
+
+@media screen and (max-width:999px) {
+
+    .hero h1 {
+        font-size: $fs-bigger;
+    }    
+    h2 {
+        font-size: $fs-bigger;
+    }
+    .hero .subheadline {
+        font-size: $fs-normal;
+    }
+    .hero {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .hero .bubble {
+        bottom: 150px;
+        right: 150px;
+        width: 300px;
+        height: 300px;
+    }
+
+    .hero .hero__btn {
+        font-size: $fs-small;
+        min-width: 150px;
+        min-height: 40px;
+        border-radius: $border-radius-small;
+        padding: 12px 32px;
+    }
+
+    .subheadline {
+        font-size: $fs-normal;
+    }    
+    .hero img {
+        width: 50%;
+    }
+    #aboutus img {
+        display: none;
+    }
+
+    h2, #cta h2 {
+        font-size: $fs-bigger;
+    }
+}
